@@ -1,0 +1,13 @@
+# Git ignore for Python
+
+*.pyc
+__pycache__/
+venv/
+*.idea/
+*.iml
+*.DS_Store
+*.log
+.env
+
+
+downloads/
