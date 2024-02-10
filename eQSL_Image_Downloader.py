@@ -86,14 +86,17 @@ def downloadQSLImages(mycall, mypassword, qsls):
                     os.makedirs('downloads/qsls')
 
                 img_path = f"downloads/qsls/{CallsignFrom}_{QSOYear}{QSOMonth}{QSODay}_{QSOHour}{QSOMinute}.jpg"
-                with open(img_path, 'wb') as f:
-                    f.write(requests.get(img_url).content)
-                print(
-                    f"Imagen de QSL de {CallsignFrom} descargada exitosamente.")
+
+                # Comprobamos si la imagen ya existe
+                if os.path.exists(img_path):
+                    print(f"Imagen de QSL de {CallsignFrom} ya existe.")
+                else:
+                    with open(img_path, 'wb') as f:
+                        f.write(requests.get(img_url).content)
+                    print(
+                        f"Imagen de QSL de {CallsignFrom} descargada exitosamente.")
             else:
                 print("Imagen de QSL no encontrada.")
-
-            time.sleep(10)
 
 
 # main
