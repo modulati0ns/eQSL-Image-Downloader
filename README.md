@@ -1,4 +1,4 @@
-# eQSL Downloader
+# eQSL Image Downloader
 
 Este programa simplifica la descarga automática de archivos ADIF y de imágenes QSL desde eQSL.cc. Está diseñado para radioaficionados que buscan una manera eficiente de gestionar sus confirmaciones QSL electrónicas.
 
